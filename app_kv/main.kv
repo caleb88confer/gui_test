@@ -1,0 +1,18 @@
+<MyAppScreenManager>:
+    MainPage:
+    Page1:
+    Page2:
+    Page3:
+
+<MainPage>:
+    BoxLayout:
+        orientation: 'vertical'
+        Button:
+            text: 'Page 1'
+            on_release: app.root.current = 'page1'
+        Button:
+            text: 'Page 2'
+            on_release: app.root.current = 'page2'
+        Button:
+            text: 'Page 3'
+            on_release: app.root.current = 'page3'
