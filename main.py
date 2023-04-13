@@ -2,6 +2,7 @@ import kivy
 from kivy.app import App
 from kivy.lang import Builder
 from kivy.uix.screenmanager import ScreenManager, Screen
+from kivy.uix.button import Button
 
 kivy.require('2.0.0')  # Ensure you're using the correct Kivy version
 
@@ -18,12 +19,15 @@ class Page2(Screen):
 class Page3(Screen):
     pass
 
+class BackButton(Button):
+    pass
+
 # Create the screen manager to handle navigation between screens
 class MyAppScreenManager(ScreenManager):
     pass
 
 # Load the .kv files
-gui_kv_files = ['app_kv/main.kv', 'app_kv/page1.kv', 'app_kv/page2.kv', 'app_kv/page3.kv']
+gui_kv_files = ['app_kv/main.kv', 'app_kv/page1.kv', 'app_kv/page2.kv', 'app_kv/page3.kv', 'app_kv/back_button.kv']
 for kv_file in gui_kv_files:
     Builder.load_file(kv_file)
 

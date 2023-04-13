@@ -1,0 +1,11 @@
+<BackButton>:
+    size_hint: None, None
+    size: 78, 78
+    background_normal: ''
+    background_color: 0, 0, 0, 0
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Triangle:
+            points: self.x + self.width / 2, self.y + self.height / 2, self.x + 3 * self.width / 4, self.y + self.height / 4, self.x + 3 * self.width / 4, self.y + 3 * self.height / 4
+    on_release: app.root.current = 'main'
